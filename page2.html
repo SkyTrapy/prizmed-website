@@ -13,6 +13,42 @@
     h1 { letter-spacing: 0.5px; }
     h2 { text-decoration-thickness: 2px; }
     footer { letter-spacing: 0.1px; }
+    /* PrizMed Imaging Solutions — Page 2 styles
+   Author: Mckayla Mayer | November 2, 2026 */
+    :root { --navy:#12375a; --blue:#166a9e; --pale:#edf6fc; --ink:#263b4a; --teal:#137d78; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family:Arial, Helvetica, sans-serif; background:#f6f9fc; color:var(--ink); line-height:1.6; }
+    header { background:var(--navy); color:white; padding:22px 8%; }
+    .topbar { display:flex; justify-content:space-between; align-items:center; gap:20px; flex-wrap:wrap; }
+    .brand { font-size:1.5rem; font-weight:800; letter-spacing:.3px; }
+    nav a { color:white; text-decoration:none; margin-left:20px; font-weight:bold; }
+    nav a:hover, nav a:focus { text-decoration:underline; }
+    .hero { background:linear-gradient(120deg,#12375a,#176e9c); color:white; padding:65px 8%; text-align:center; }
+    h1 { font-size:clamp(2rem,5vw,3rem); line-height:1.15; margin:0 0 14px; }
+    .hero p { max-width:720px; margin:0 auto; font-size:1.1rem; }
+    main { max-width:1180px; margin:auto; padding:38px 22px 65px; }
+    h2 { color:var(--navy); font-size:1.8rem; margin:0 0 12px; }
+    h3 { color:var(--navy); margin:12px 0 7px; }
+    .intro { max-width:790px; margin-bottom:24px; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:20px; }
+    .card { background:white; border:1px solid #e1e9ef; border-radius:14px; overflow:hidden; box-shadow:0 5px 18px rgba(18,55,90,.08); }
+    .product-art { height:165px; background:var(--pale); display:flex; align-items:center; justify-content:center; }
+    .product-art svg { width:145px; height:120px; }
+    .card-content { padding:20px; }
+    .card p { margin:6px 0 12px; }
+    .price { font-size:1.25rem; font-weight:bold; color:var(--teal); }
+    .note { color:#596d7c; font-size:.9rem; }
+    .section { margin-top:48px; }
+    .steps { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+    .step { padding:24px; background:white; border:1px solid #e1e9ef; border-radius:12px; }
+    .number { display:inline-grid; place-items:center; width:38px; height:38px; border-radius:50%; background:var(--blue); color:white; font-weight:bold; }
+    .promo { background:#dff3f2; border-left:6px solid var(--teal); padding:26px; border-radius:10px; }
+    .button { display:inline-block; padding:12px 22px; background:var(--blue); color:white; text-decoration:none; border-radius:8px; font-weight:bold; margin-top:8px; }
+    .button:hover { background:var(--navy); }
+    footer { background:var(--navy); color:white; text-align:center; padding:24px; }
+    footer p { margin:4px; }
+    @media(max-width:650px) { .steps { grid-template-columns:1fr; } nav a { margin:0 12px 0 0; } .hero { padding:48px 22px; } }
+
   </style>
 </head>
 <body>
