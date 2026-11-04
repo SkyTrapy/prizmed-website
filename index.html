@@ -10,22 +10,39 @@
         Description: Page 1 (index.html) - Home overview for PrizMed Imaging Solutions
     -->
     <style>
-        /* Embedded CSS - Consistent Theme & 3+ Element Styling */
+        /* Shared Unified Theme Styling */
+        :root {
+            --navy: #003366;
+            --teal: #00a8cc;
+            --teal-hover: #007a99;
+            --ice-blue: #e6f2ff;
+            --bg-main: #f4f7f6;
+            --text-dark: #333333;
+            --card-border: #dddddd;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f7f6;
-            color: #333333;
+            background-color: var(--bg-main);
+            color: var(--text-dark);
+            line-height: 1.6;
         }
 
         header {
-            background-color: #12375a;
+            background-color: var(--navy);
             color: #ffffff;
             padding: 20px 40px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
         }
 
         header h1 {
@@ -39,52 +56,60 @@
             text-decoration: none;
             margin-left: 20px;
             font-weight: bold;
+            transition: color 0.2s ease;
         }
 
-        nav a:hover {
-            color: #00a8cc;
+        nav a:hover, nav a:focus {
+            color: var(--teal);
+            text-decoration: underline;
         }
 
         .hero {
-            background-color: #e6f2ff;
+            background-color: var(--ice-blue);
             text-align: center;
-            padding: 60px 20px;
-            border-bottom: 3px solid #00a8cc;
+            padding: 55px 20px;
+            border-bottom: 3px solid var(--teal);
         }
 
         .hero h2 {
             font-size: 36px;
-            color: #003366;
-            margin-bottom: 15px;
+            color: var(--navy);
+            margin: 0 0 15px 0;
         }
 
         .hero p {
             font-size: 18px;
             max-width: 750px;
             margin: 0 auto 25px auto;
-            line-height: 1.6;
             color: #444444;
         }
 
         .cta-button {
             display: inline-block;
-            background-color: #00a8cc;
+            background-color: var(--teal);
             color: #ffffff;
             padding: 12px 30px;
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 6px;
             font-size: 16px;
             font-weight: bold;
+            transition: background-color 0.2s ease;
         }
 
         .cta-button:hover {
-            background-color: #007a99;
+            background-color: var(--teal-hover);
         }
 
         main {
-            max-width: 1000px;
+            max-width: 1100px;
             margin: 40px auto;
             padding: 0 20px;
+        }
+
+        h2 {
+            color: var(--navy);
+            font-size: 30px;
+            margin-top: 0;
         }
 
         .highlights {
@@ -96,50 +121,72 @@
 
         .card {
             background-color: #ffffff;
-            border: 1px solid #dddddd;
+            border: 1px solid var(--card-border);
             border-radius: 8px;
-            padding: 20px;
+            padding: 25px;
             flex: 1;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.04);
         }
 
         .card h3 {
-            color: #12375a;
+            color: var(--navy);
             margin-top: 0;
+            font-size: 20px;
         }
 
         .hero-img {
             max-width: 100%;
             height: auto;
+            max-height: 420px;
             border-radius: 8px;
-            margin-top: 20px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin-top: 25px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            object-fit: cover;
         }
 
         .trust-badge {
             background-color: #ffffff;
-            border-left: 4px solid #00a8cc;
-            padding: 15px 20px;
+            border-left: 5px solid var(--teal);
+            border-radius: 0 8px 8px 0;
+            padding: 18px 22px;
             margin-top: 40px;
             font-style: italic;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
         }
 
         footer {
-            background-color: #12375a;
+            background-color: var(--navy);
             color: #ffffff;
             text-align: center;
-            padding: 20px;
+            padding: 25px;
             margin-top: 50px;
             font-size: 14px;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        @media (max-width: 800px) {
+            .highlights {
+                flex-direction: column;
+            }
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+            nav a {
+                margin: 0 10px;
+            }
         }
     </style>
 </head>
 <body>
 
-    <!-- Main Header & Navigation Container -->
+    <!-- Main Header & Navigation -->
     <header>
         <h1>PrizMed Imaging Solutions</h1>
-        <nav>
+        <nav aria-label="Main navigation">
             <a href="index.html">Home</a>
             <a href="page2.html">Products & Services</a>
             <a href="page3.html">About Us</a>
@@ -152,4 +199,41 @@
         <p>Empowering hospital systems, medical centers, and private practices with reliable refurbished medical imaging equipment and seamless clinical integration.</p>
         <a href="page2.html" class="cta-button">Explore Our Products</a>
         <br>
-        <img src
+        <img src="https://amris.mbi.ufl.edu/wordpress/files/2020/05/3TElition_18May2020-1120x1120.jpg" alt="Philips MRI Machine in a medical imaging suite" class="hero-img">
+    </section>
+
+    <!-- Main Content Area -->
+    <main>
+        <h2>Why Partner With PrizMed?</h2>
+        <p>At PrizMed Imaging Solutions, our mission is to reduce healthcare costs nationwide through value-added offerings of reconditioned MRI and CT equipment without sacrificing clinical performance or diagnostic precision.</p>
+
+        <!-- Feature Highlights Grid -->
+        <div class="highlights">
+            <div class="card">
+                <h3>High Precision MRI Systems</h3>
+                <p>Fully inspected, certified, and calibrated MRI systems designed for peak clinical reliability and exceptional image quality.</p>
+            </div>
+            <div class="card">
+                <h3>End-to-End IT Support</h3>
+                <p>Integrated network setup, cybersecurity compliance, and seamless cloud data integration managed by our dedicated IT team.</p>
+            </div>
+            <div class="card">
+                <h3>Clinical Staff Training</h3>
+                <p>On-site demonstrations and comprehensive training from expert clinical product specialists to maximize unit usage.</p>
+            </div>
+        </div>
+
+        <!-- Trust Element / Mission Badge -->
+        <div class="trust-badge">
+            <p><strong>Trust & Quality First:</strong> "PrizMed enabled our imaging center to expand diagnostic services while saving over 30% in capital expenditure." — <em>Oak Valley Hospital Procurement Team</em></p>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p><strong>PrizMed Imaging Solutions</strong></p>
+        <p>&copy; 2026 | Designed by Anthony Russell (Healthcare IT & Support Specialist)</p>
+    </footer>
+
+</body>
+</html>

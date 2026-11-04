@@ -3,308 +3,313 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us | PrizMed Imaging Solutions</title>
-
+  <title>PrizMed Imaging Solutions | About Us</title>
+  <!-- 
+      Author: Lucy Lefever (Clinical Product Specialist)
+      Date: November 2, 2026
+      Description: Page 3 (page3.html) - About Us, Founder Bio, and Contact Information
+  -->
   <style>
+    /* Shared Unified Theme Styling */
+    :root {
+        --navy: #003366;
+        --teal: #00a8cc;
+        --teal-hover: #007a99;
+        --ice-blue: #e6f2ff;
+        --bg-main: #f4f7f6;
+        --text-dark: #333333;
+        --card-border: #dddddd;
+    }
+
     * {
-      box-sizing: border-box;
+        box-sizing: border-box;
     }
 
     body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f4f7fa;
-      color: #263746;
-      line-height: 1.7;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: var(--bg-main);
+        color: var(--text-dark);
+        line-height: 1.6;
     }
 
     header {
-      background: #12375a;
-      color: white;
-      text-align: center;
-      padding: 35px 20px;
+        background-color: var(--navy);
+        color: #ffffff;
+        padding: 20px 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 15px;
     }
 
     header h1 {
-      margin: 0;
-      font-size: 36px;
-    }
-
-    header p {
-      margin: 8px 0 20px;
-    }
-
-    nav {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 25px;
+        margin: 0;
+        font-size: 28px;
+        color: #ffffff;
     }
 
     nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
+        color: #ffffff;
+        text-decoration: none;
+        margin-left: 20px;
+        font-weight: bold;
+        transition: color 0.2s ease;
     }
 
-    nav a:hover {
-      text-decoration: underline;
+    nav a:hover, nav a:focus {
+        color: var(--teal);
+        text-decoration: underline;
     }
 
     .hero {
-      background: #dceef2;
-      padding: 55px 20px;
-      text-align: center;
+        background-color: var(--ice-blue);
+        text-align: center;
+        padding: 55px 20px;
+        border-bottom: 3px solid var(--teal);
     }
 
     .hero h2 {
-      font-size: 36px;
-      margin: 0 0 15px;
+        font-size: 36px;
+        color: var(--navy);
+        margin: 0 0 15px 0;
     }
 
     .hero p {
-      max-width: 700px;
-      margin: auto;
+        font-size: 18px;
+        max-width: 750px;
+        margin: 0 auto;
+        color: #444444;
     }
 
     main {
-      width: min(1100px, 90%);
-      margin: auto;
+        max-width: 1100px;
+        margin: 40px auto;
+        padding: 0 20px;
     }
 
     section {
-      padding: 45px 0;
-    }
-
-    h2,
-    h3 {
-      color: #12375a;
+        padding: 20px 0;
     }
 
     h2 {
-      font-size: 30px;
-      margin-top: 0;
+        color: var(--navy);
+        font-size: 30px;
+        margin-top: 0;
+    }
+
+    h3 {
+        color: var(--navy);
+        font-size: 20px;
     }
 
     .team-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 22px;
+        margin-top: 20px;
     }
 
     .card,
     .contact-form,
     .hours,
     .faq {
-      background: white;
-      border: 1px solid #d7e1e8;
-      border-radius: 10px;
-      padding: 25px;
+        background: #ffffff;
+        border: 1px solid var(--card-border);
+        border-radius: 8px;
+        padding: 25px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.04);
     }
 
     .initials {
-      width: 70px;
-      height: 70px;
-      border-radius: 50%;
-      background: #dceef2;
-      color: #14364e;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 25px;
-      font-weight: bold;
+        width: 65px;
+        height: 65px;
+        border-radius: 50%;
+        background-color: var(--ice-blue);
+        color: var(--navy);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 22px;
+        font-weight: bold;
+        margin-bottom: 15px;
     }
 
     .card h3 {
-      margin-bottom: 5px;
+        margin-bottom: 5px;
     }
 
     .role {
-      color: #176777;
-      font-weight: bold;
+        color: var(--teal);
+        font-weight: bold;
+        margin-top: 0;
     }
 
     .values {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 20px;
     }
 
     .values span {
-      background: #dceef2;
-      padding: 8px 18px;
-      border-radius: 20px;
-      font-weight: bold;
+        background-color: var(--ice-blue);
+        color: var(--navy);
+        padding: 8px 18px;
+        border-radius: 20px;
+        font-weight: bold;
     }
 
     .contact-grid,
     .details-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 30px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+        margin-top: 20px;
     }
 
     a {
-      color: #176777;
+        color: var(--teal);
     }
 
     label {
-      display: block;
-      margin: 15px 0 5px;
-      font-weight: bold;
+        display: block;
+        margin: 15px 0 5px;
+        font-weight: bold;
     }
 
     input,
     select,
     textarea {
-      width: 100%;
-      padding: 12px;
-      border: 1px solid #aebdc8;
-      border-radius: 5px;
-      font: inherit;
-      color: #263746;
-      background: #fbfcfd;
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #aebdc8;
+        border-radius: 5px;
+        font: inherit;
+        color: var(--text-dark);
+        background: #fbfcfd;
     }
 
     textarea {
-      min-height: 120px;
-      resize: vertical;
+        min-height: 120px;
+        resize: vertical;
     }
 
     button {
-      margin-top: 18px;
-      padding: 12px 20px;
-      background: #176777;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      font: inherit;
+        margin-top: 18px;
+        padding: 12px 20px;
+        background-color: var(--teal);
+        color: #ffffff;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+    }
+
+    button:hover {
+        background-color: var(--teal-hover);
     }
 
     .note {
-      font-size: 14px;
-      color: #596b78;
+        font-size: 14px;
+        color: #666666;
     }
 
     table {
-      width: 100%;
-      border-collapse: collapse;
+        width: 100%;
+        border-collapse: collapse;
     }
 
     th,
     td {
-      text-align: left;
-      padding: 12px 0;
-      border-bottom: 1px solid #d7e1e8;
+        text-align: left;
+        padding: 12px 0;
+        border-bottom: 1px solid var(--card-border);
     }
 
     th {
-      font-weight: normal;
+        font-weight: normal;
     }
 
     details {
-      padding: 18px 0;
-      border-bottom: 1px solid #d7e1e8;
+        padding: 15px 0;
+        border-bottom: 1px solid var(--card-border);
     }
 
     summary {
-      cursor: pointer;
-      font-weight: bold;
-      color: #12375a;
+        cursor: pointer;
+        font-weight: bold;
+        color: var(--navy);
     }
 
     details p {
-      margin-bottom: 0;
-    }
-
-    :focus-visible {
-      outline: 3px solid #2196b0;
-      outline-offset: 4px;
+        margin-bottom: 0;
     }
 
     footer {
-      background: #12375a;
-      color: white;
-      padding: 25px;
-      text-align: center;
-      margin-top: 30px;
+        background-color: var(--navy);
+        color: #ffffff;
+        padding: 25px;
+        text-align: center;
+        margin-top: 50px;
+        font-size: 14px;
     }
 
     footer p {
-      margin: 5px 0;
+        margin: 5px 0;
     }
 
     @media (max-width: 800px) {
-      .team-grid,
-      .contact-grid,
-      .details-grid {
-        grid-template-columns: 1fr;
-      }
-
-      header h1,
-      .hero h2 {
-        font-size: 28px;
-      }
+        .team-grid,
+        .contact-grid,
+        .details-grid {
+            grid-template-columns: 1fr;
+        }
+        header {
+            flex-direction: column;
+            text-align: center;
+        }
+        nav a {
+            margin: 0 10px;
+        }
     }
   </style>
 </head>
 
 <body>
+  <!-- Main Header & Navigation -->
   <header>
     <h1>PrizMed Imaging Solutions</h1>
-    <p>Quality Imaging. Trusted Support. Better Connections.</p>
-
     <nav aria-label="Main navigation">
-      <a href="#story">Our Story</a>
-      <a href="#team">Our Team</a>
-      <a href="#contact">Contact Us</a>
-      <a href="#faq">Hours & FAQ</a>
+      <a href="index.html">Home</a>
+      <a href="page2.html">Products & Services</a>
+      <a href="page3.html">About Us</a>
     </nav>
   </header>
 
+  <!-- Hero Section -->
   <div class="hero">
     <h2>Meet the People Behind PrizMed</h2>
-    <p>
-      Connecting healthcare facilities with medical imaging equipment
-      through clinical knowledge, technical support, and clear communication.
-    </p>
+    <p>Connecting healthcare facilities with medical imaging equipment through clinical knowledge, technical support, and clear communication.</p>
   </div>
 
   <main>
+    <!-- Our Story Section -->
     <section id="story">
       <h2>Our Story</h2>
+      <p>Our imagined founding story began with three students who shared an interest in improving healthcare. Lucy, Anthony, and McKayla noticed that choosing medical imaging equipment involves more than finding a machine. Customers also need clear information, dependable technology, and training.</p>
 
-      <p>
-        Our imagined founding story began with three students who shared
-        an interest in improving healthcare. Lucy, Anthony, and McKayla
-        noticed that choosing medical imaging equipment involves more
-        than finding a machine. Customers also need clear information,
-        dependable technology, and training.
-      </p>
+      <p>Combining their interests in clinical care, information technology, and marketing, they created their PrizMed business concept. Their goal was to help healthcare facilities understand their equipment options while keeping quality and cost in mind.</p>
 
-      <p>
-        Combining their interests in clinical care, information technology,
-        and marketing, they created their PrizMed business concept.
-        Their goal was to help healthcare facilities understand their
-        equipment options while keeping quality and cost in mind.
-      </p>
-
-      <p class="note">
-        This origin story is fictional and was created for our assignment.
-      </p>
+      <p class="note">This origin story is fictional and was created for our assignment.</p>
 
       <h3>Our Mission</h3>
-      <p>
-        To reduce healthcare costs through cost-effective, value-added
-        offerings of high-quality medical imaging equipment.
-      </p>
-
-      <p>
-        Our business profile describes PrizMed as a small, privately
-        owned, for-profit company specializing in medical imaging
-        equipment and services.
-      </p>
+      <p>To reduce healthcare costs through cost-effective, value-added offerings of high-quality medical imaging equipment.</p>
+      <p>Our business profile describes PrizMed as a small, privately owned, for-profit company specializing in medical imaging equipment and services.</p>
 
       <div class="values" aria-label="Company values">
         <span>Trust</span>
@@ -313,64 +318,44 @@
       </div>
     </section>
 
+    <!-- Team Section -->
     <section id="team">
       <h2>Meet Our Team</h2>
-
       <div class="team-grid">
         <article class="card">
           <div class="initials" aria-hidden="true">LL</div>
           <h3>Lucy Lefever</h3>
           <p class="role">Clinical Product Specialist</p>
-          <p>
-            Lucy provides training and clinical support to medical staff.
-            She demonstrates equipment capabilities and image quality,
-            helps facilities integrate new systems, and explains how
-            to operate the equipment.
-          </p>
+          <p>Lucy provides training and clinical support to medical staff. She demonstrates equipment capabilities and image quality, helps facilities integrate new systems, and explains how to operate the equipment.</p>
         </article>
 
         <article class="card">
           <div class="initials" aria-hidden="true">AR</div>
           <h3>Anthony Russell</h3>
           <p class="role">Healthcare IT &amp; Support Specialist</p>
-          <p>
-            Anthony supports equipment configuration, network
-            infrastructure, image testing, and technical deployment.
-            He also maintains company systems and helps with
-            cybersecurity and troubleshooting.
-          </p>
+          <p>Anthony supports equipment configuration, network infrastructure, image testing, and technical deployment. He also maintains company systems and helps with cybersecurity and troubleshooting.</p>
         </article>
 
         <article class="card">
           <div class="initials" aria-hidden="true">MM</div>
           <h3>McKayla Mayer</h3>
           <p class="role">Marketing Manager</p>
-          <p>
-            McKayla promotes MRI equipment through advertisements,
-            social media, and the company website. She works with
-            the team to provide accurate product information and
-            connect with potential customers.
-          </p>
+          <p>McKayla promotes MRI equipment through advertisements, social media, and the company website. She works with the team to provide accurate product information and connect with potential customers.</p>
         </article>
       </div>
     </section>
 
+    <!-- Contact Section -->
     <section id="contact">
       <h2>Contact Us</h2>
-
       <div class="contact-grid">
         <div>
           <h3>Start a Conversation</h3>
-          <p>
-            Have a question about MRI equipment, clinical training,
-            or technical support? Reach out to our team.
-          </p>
+          <p>Have a question about MRI equipment, clinical training, or technical support? Reach out to our team.</p>
 
           <p>
             <strong>Email:</strong><br>
-            <a href="mailto:hello@prizmed.example">
-              hello@prizmed.example
-            </a>
+            <a href="mailto:hello@prizmed.example">hello@prizmed.example</a>
           </p>
 
           <p>
@@ -390,34 +375,18 @@
             LinkedIn: @prizmed
           </p>
 
-          <p class="note">
-            These are fictional contact details for our student project.
-          </p>
+          <p class="note">These are fictional contact details for our student project.</p>
         </div>
 
         <form class="contact-form" aria-label="Demo contact form">
           <h3>Send Us a Message</h3>
-          <p class="note">
-            This demonstration form does not send or save messages.
-          </p>
+          <p class="note">This demonstration form does not send or save messages.</p>
 
           <label for="name">Name</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            autocomplete="name"
-            placeholder="Your full name"
-          >
+          <input type="text" id="name" name="name" autocomplete="name" placeholder="Your full name">
 
           <label for="email">Email Address</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            autocomplete="email"
-            placeholder="you@example.com"
-          >
+          <input type="email" id="email" name="email" autocomplete="email" placeholder="you@example.com">
 
           <label for="topic">Topic</label>
           <select id="topic" name="topic">
@@ -429,26 +398,19 @@
           </select>
 
           <label for="message">Message</label>
-          <textarea
-            id="message"
-            name="message"
-            placeholder="How can we help?"
-          ></textarea>
+          <textarea id="message" name="message" placeholder="How can we help?"></textarea>
 
-          <button type="button" disabled>
-            Send Message — Demo Only
-          </button>
+          <button type="button" disabled>Send Message — Demo Only</button>
         </form>
       </div>
     </section>
 
+    <!-- Hours & FAQ Section -->
     <section id="faq">
       <h2>Hours & Frequently Asked Questions</h2>
-
       <div class="details-grid">
         <div class="hours">
           <h3>Hours of Operation</h3>
-
           <table aria-label="Pretend business hours">
             <tbody>
               <tr>
@@ -465,53 +427,34 @@
               </tr>
             </tbody>
           </table>
-
-          <p class="note">
-            Pretend hours for our assignment. All times are Eastern Time.
-          </p>
+          <p class="note">Pretend hours for our assignment. All times are Eastern Time.</p>
         </div>
 
         <div class="faq">
           <h3>Your Questions, Answered</h3>
-
           <details>
             <summary>Who are our customers?</summary>
-            <p>
-              Our customers include hospital systems, imaging centers,
-              and private medical practices looking for medical
-              imaging equipment and related services.
-            </p>
+            <p>Our customers include hospital systems, imaging centers, and private medical practices looking for medical imaging equipment and related services.</p>
           </details>
 
           <details>
             <summary>Can I purchase equipment on this page?</summary>
-            <p>
-              No. This page introduces our company and team for a
-              student project. It does not process equipment purchases,
-              payments, or actual customer inquiries.
-            </p>
+            <p>No. This page introduces our company and team for a student project. It does not process equipment purchases, payments, or actual customer inquiries.</p>
           </details>
 
           <details>
-            <summary>
-              Who helps customers learn to use this equipment?
-            </summary>
-            <p>
-              Lucy Lefever, our Clinical Product Specialist, provides
-              training, demonstrations, and clinical support to help
-              medical staff understand and operate the equipment.
-              Anthony Russell supports the technical setup, network
-              connections, and troubleshooting.
-            </p>
+            <summary>Who helps customers learn to use this equipment?</summary>
+            <p>Lucy Lefever, our Clinical Product Specialist, provides training, demonstrations, and clinical support to help medical staff understand and operate the equipment. Anthony Russell supports the technical setup, network connections, and troubleshooting.</p>
           </details>
         </div>
       </div>
     </section>
   </main>
 
+  <!-- Footer -->
   <footer>
     <p><strong>PrizMed Imaging Solutions</strong></p>
-    <p>&copy; 2026 | Student Project Website</p>
+    <p>&copy; 2026 | Designed by Lucy Lefever (Clinical Product Specialist)</p>
   </footer>
 </body>
 </html>
