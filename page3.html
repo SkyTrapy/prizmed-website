@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | PrizMed Imaging Solutions</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f7fa;
+      color: #263746;
+      line-height: 1.7;
+    }
+
+    header {
+      background: #14364e;
+      color: white;
+      text-align: center;
+      padding: 35px 20px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 36px;
+    }
+
+    header p {
+      margin: 8px 0 20px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 25px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .hero {
+      background: #dceef2;
+      padding: 55px 20px;
+      text-align: center;
+    }
+
+    .hero h2 {
+      font-size: 36px;
+      margin: 0 0 15px;
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: auto;
+    }
+
+    main {
+      width: min(1100px, 90%);
+      margin: auto;
+    }
+
+    section {
+      padding: 45px 0;
+    }
+
+    h2,
+    h3 {
+      color: #14364e;
+    }
+
+    h2 {
+      font-size: 30px;
+      margin-top: 0;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .card,
+    .contact-form,
+    .hours,
+    .faq {
+      background: white;
+      border: 1px solid #d7e1e8;
+      border-radius: 10px;
+      padding: 25px;
+    }
+
+    .initials {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      background: #dceef2;
+      color: #14364e;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 25px;
+      font-weight: bold;
+    }
+
+    .card h3 {
+      margin-bottom: 5px;
+    }
+
+    .role {
+      color: #176777;
+      font-weight: bold;
+    }
+
+    .values {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .values span {
+      background: #dceef2;
+      padding: 8px 18px;
+      border-radius: 20px;
+      font-weight: bold;
+    }
+
+    .contact-grid,
+    .details-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+    }
+
+    a {
+      color: #176777;
+    }
+
+    label {
+      display: block;
+      margin: 15px 0 5px;
+      font-weight: bold;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #aebdc8;
+      border-radius: 5px;
+      font: inherit;
+      color: #263746;
+      background: #fbfcfd;
+    }
+
+    textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    button {
+      margin-top: 18px;
+      padding: 12px 20px;
+      background: #176777;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font: inherit;
+    }
+
+    .note {
+      font-size: 14px;
+      color: #596b78;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th,
+    td {
+      text-align: left;
+      padding: 12px 0;
+      border-bottom: 1px solid #d7e1e8;
+    }
+
+    th {
+      font-weight: normal;
+    }
+
+    details {
+      padding: 18px 0;
+      border-bottom: 1px solid #d7e1e8;
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: bold;
+      color: #14364e;
+    }
+
+    details p {
+      margin-bottom: 0;
+    }
+
+    :focus-visible {
+      outline: 3px solid #2196b0;
+      outline-offset: 4px;
+    }
+
+    footer {
+      background: #14364e;
+      color: white;
+      padding: 25px;
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    footer p {
+      margin: 5px 0;
+    }
+
+    @media (max-width: 800px) {
+      .team-grid,
+      .contact-grid,
+      .details-grid {
+        grid-template-columns: 1fr;
+      }
+
+      header h1,
+      .hero h2 {
+        font-size: 28px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>PrizMed Imaging Solutions</h1>
+    <p>Quality Imaging. Trusted Support. Better Connections.</p>
+
+    <nav aria-label="Main navigation">
+      <a href="#story">Our Story</a>
+      <a href="#team">Our Team</a>
+      <a href="#contact">Contact Us</a>
+      <a href="#faq">Hours & FAQ</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <h2>Meet the People Behind PrizMed</h2>
+    <p>
+      Connecting healthcare facilities with medical imaging equipment
+      through clinical knowledge, technical support, and clear communication.
+    </p>
+  </div>
+
+  <main>
+    <section id="story">
+      <h2>Our Story</h2>
+
+      <p>
+        Our imagined founding story began with three students who shared
+        an interest in improving healthcare. Lucy, Anthony, and McKayla
+        noticed that choosing medical imaging equipment involves more
+        than finding a machine. Customers also need clear information,
+        dependable technology, and training.
+      </p>
+
+      <p>
+        Combining their interests in clinical care, information technology,
+        and marketing, they created their PrizMed business concept.
+        Their goal was to help healthcare facilities understand their
+        equipment options while keeping quality and cost in mind.
+      </p>
+
+      <p class="note">
+        This origin story is fictional and was created for our assignment.
+      </p>
+
+      <h3>Our Mission</h3>
+      <p>
+        To reduce healthcare costs through cost-effective, value-added
+        offerings of high-quality medical imaging equipment.
+      </p>
+
+      <p>
+        Our business profile describes PrizMed as a small, privately
+        owned, for-profit company specializing in medical imaging
+        equipment and services.
+      </p>
+
+      <div class="values" aria-label="Company values">
+        <span>Trust</span>
+        <span>Customer Success</span>
+        <span>Equality</span>
+      </div>
+    </section>
+
+    <section id="team">
+      <h2>Meet Our Team</h2>
+
+      <div class="team-grid">
+        <article class="card">
+          <div class="initials" aria-hidden="true">LL</div>
+          <h3>Lucy Lefever</h3>
+          <p class="role">Clinical Product Specialist</p>
+          <p>
+            Lucy provides training and clinical support to medical staff.
+            She demonstrates equipment capabilities and image quality,
+            helps facilities integrate new systems, and explains how
+            to operate the equipment.
+          </p>
+        </article>
+
+        <article class="card">
+          <div class="initials" aria-hidden="true">AR</div>
+          <h3>Anthony Russell</h3>
+          <p class="role">Healthcare IT &amp; Support Specialist</p>
+          <p>
+            Anthony supports equipment configuration, network
+            infrastructure, image testing, and technical deployment.
+            He also maintains company systems and helps with
+            cybersecurity and troubleshooting.
+          </p>
+        </article>
+
+        <article class="card">
+          <div class="initials" aria-hidden="true">MM</div>
+          <h3>McKayla Mayer</h3>
+          <p class="role">Marketing Manager</p>
+          <p>
+            McKayla promotes MRI equipment through advertisements,
+            social media, and the company website. She works with
+            the team to provide accurate product information and
+            connect with potential customers.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Us</h2>
+
+      <div class="contact-grid">
+        <div>
+          <h3>Start a Conversation</h3>
+          <p>
+            Have a question about MRI equipment, clinical training,
+            or technical support? Reach out to our team.
+          </p>
+
+          <p>
+            <strong>Email:</strong><br>
+            <a href="mailto:hello@prizmed.example">
+              hello@prizmed.example
+            </a>
+          </p>
+
+          <p>
+            <strong>Phone:</strong><br>
+            (803) 555-0147
+          </p>
+
+          <p>
+            <strong>Location:</strong><br>
+            Campus Innovation Center<br>
+            Room 204 — By appointment
+          </p>
+
+          <p>
+            <strong>Social Media:</strong><br>
+            Instagram: @prizmed<br>
+            LinkedIn: @prizmed
+          </p>
+
+          <p class="note">
+            These are fictional contact details for our student project.
+          </p>
+        </div>
+
+        <form class="contact-form" aria-label="Demo contact form">
+          <h3>Send Us a Message</h3>
+          <p class="note">
+            This demonstration form does not send or save messages.
+          </p>
+
+          <label for="name">Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            autocomplete="name"
+            placeholder="Your full name"
+          >
+
+          <label for="email">Email Address</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            autocomplete="email"
+            placeholder="you@example.com"
+          >
+
+          <label for="topic">Topic</label>
+          <select id="topic" name="topic">
+            <option value="">Choose a topic</option>
+            <option>MRI equipment information</option>
+            <option>Clinical training</option>
+            <option>Technical support</option>
+            <option>General question</option>
+          </select>
+
+          <label for="message">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            placeholder="How can we help?"
+          ></textarea>
+
+          <button type="button" disabled>
+            Send Message — Demo Only
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <section id="faq">
+      <h2>Hours & Frequently Asked Questions</h2>
+
+      <div class="details-grid">
+        <div class="hours">
+          <h3>Hours of Operation</h3>
+
+          <table aria-label="Pretend business hours">
+            <tbody>
+              <tr>
+                <th scope="row">Monday–Friday</th>
+                <td>9 AM–5 PM</td>
+              </tr>
+              <tr>
+                <th scope="row">Saturday</th>
+                <td>10 AM–2 PM</td>
+              </tr>
+              <tr>
+                <th scope="row">Sunday</th>
+                <td>Closed</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <p class="note">
+            Pretend hours for our assignment. All times are Eastern Time.
+          </p>
+        </div>
+
+        <div class="faq">
+          <h3>Your Questions, Answered</h3>
+
+          <details>
+            <summary>Who are our customers?</summary>
+            <p>
+              Our customers include hospital systems, imaging centers,
+              and private medical practices looking for medical
+              imaging equipment and related services.
+            </p>
+          </details>
+
+          <details>
+            <summary>Can I purchase equipment on this page?</summary>
+            <p>
+              No. This page introduces our company and team for a
+              student project. It does not process equipment purchases,
+              payments, or actual customer inquiries.
+            </p>
+          </details>
+
+          <details>
+            <summary>
+              Who helps customers learn to use this equipment?
+            </summary>
+            <p>
+              Lucy Lefever, our Clinical Product Specialist, provides
+              training, demonstrations, and clinical support to help
+              medical staff understand and operate the equipment.
+              Anthony Russell supports the technical setup, network
+              connections, and troubleshooting.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p><strong>PrizMed Imaging Solutions</strong></p>
+    <p>&copy; 2026 | Student Project Website</p>
+  </footer>
+</body>
+</html>
